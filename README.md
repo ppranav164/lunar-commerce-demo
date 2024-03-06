@@ -1,12 +1,26 @@
-<p align="center"><a href="https://lunarphp.io/" target="_blank"><img src="https://raw.githubusercontent.com/lunarphp/art/main/lunar-logo.svg" width="200" alt="Lunar"></a></p>
+git clone https://github.com/ppranav164/lunar-commerce-demo.git
 
-# Starter Kit
+cd lunar-commerce-demo
 
-This repository is provided as a reference to learn how to use Lunar Laravel E-Commerce package. This example is a classic e-commerce store.
+Then install composer dependencies
 
-> **Warning**
-> This application is purely an example of how you can implement Lunar headless e-commerce for Laravel. It is not production ready or complete.
+composer install
+Configure the Laravel app
+Copy the .env.example file to .env and make sure the details match to your install.
 
-# Installation
+cp .env.example .env
+All the relevant configuration files should be present in the repo.
 
-For full installation instructions please visit https://docs.lunarphp.io/core/starter-kits.html
+Migrate and seed
+Run the migrations
+
+php artisan migrate
+Install Lunar
+
+php artisan lunar:install
+Seed the demo data.
+
+php artisan db:seed
+Link the storage directory
+
+php artisan storage:link
